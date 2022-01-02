@@ -2,8 +2,10 @@ import  Axios  from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams  } from 'react-router-dom';
 import { SubscribedContext } from './SubscribedContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
+toast.configure();
 const Addcontribution = () =>
 {
     const [task,settask] = useState('');
@@ -11,12 +13,16 @@ const Addcontribution = () =>
     const [Initiative,setInitiative] = useContext(SubscribedContext);
     const {id} = useParams();
     const filterInitiative = Initiative.filter(Initiative => Initiative.Subscribe_id === parseInt(id));
-    
+    const setsuccess = () =>
+    {
+      toast.success('Contribution added',{position:toast.POSITION.TOP_LEFT});
+    }
     const addlog = (e)=>
     {
         Axios.post('http://localhost:3001/addlog',{task:task,hours:hours,id:id}).then(response =>
          {
                 console.log(response);
+                setsuccess();
                 window.location.href = '/contribution'; 
             }
         )
