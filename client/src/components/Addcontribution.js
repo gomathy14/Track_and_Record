@@ -22,8 +22,8 @@ const Addcontribution = () =>
         Axios.post('http://localhost:3001/addlog',{task:task,hours:hours,id:id}).then(response =>
          {
                 console.log(response);
-                setsuccess();
                 window.location.href = '/contribution'; 
+                setsuccess();
             }
         )
  

@@ -451,3 +451,43 @@ th{
   color: grey;
   background-color: grey;
 }
+
+.resp-list{
+  position: relative;
+  width:400px;
+  margin: 30px auto 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(6, 139, 128, 0.74);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.resp-list .resp-item{
+  display: flex;
+  background: rgba(10, 46, 87, 0.911);
+  padding: 10px 20px;
+  color:#fff;
+  margin: 5px 0;
+  transition: .5s;
+}
+
+.resp-list .resp-item:nth-child(odd)
+{
+   background: rgba(6, 115, 187, 0.849);
+}
+
+ .resp-list .resp-item span:nth-child(1){
+   width:5px;
+ }
+
+ .resp-list .resp-item span:nth-child(3){
+  width:100px;
+}
+
+.resp-list .resp-item:hover
+{
+  transform: scale(1.06);
+  background:#2707db;
+}

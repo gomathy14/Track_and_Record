@@ -45,7 +45,7 @@ const Subscribedinitiatives = ({token}) =>
                   <tr>   
                   <th scope='col' onClick={() => sorting("Initiative_name")}>Initiative Name</th>
                   <th scope='col' onClick={() => sorting("Initiative_category")}>Initiative Category</th>
-                  <th scope = 'col'>Subscribed Date</th>
+                  <th scope = 'col' onClick={() => sorting("Subscribe_date")}>Subscribed Date</th>
                   <th scope = 'col'>Contribution</th>
                   </tr>
               </thead>

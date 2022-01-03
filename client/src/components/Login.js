@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import  Axios  from 'axios';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { MdAirlineSeatLegroomExtra } from 'react-icons/md';
+
 
 toast.configure();
 const Login = ({ settoken , token}) =>
