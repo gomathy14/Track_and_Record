@@ -67,7 +67,7 @@ function App() {
       <Router>
         <Sidebar token = {token}/>
         <Routes>
-          <Route path = "/" element= {<Home/>}></Route>
+          <Route path = "/" element= {<Home token = {token}/>}></Route>
          <Route path ="/initiatives"  element = {<InitiativeList token = {token}/>}/>
         <Route path="/initiatives/ongoing" exact element = {<OngoingInitiative token = {token}/>}></Route>
         <Route path = "/initiatives/upcoming" exact element= {<UpcomingInitiative/>}></Route>
